@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OlimpicTrained</title>
+    <script src="funcionalidades.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">OLIMPICTRAINED</div>
+        <div class="nav-links">
+            <button onclick="showPage('inicio')">Inicio</button>
+            <button onclick="showPage('juegos')">Juegos</button>
+            <button onclick="showPage('acerca')">Acerca de</button>
+            <button onclick="showPage('ayuda')">Ayuda</button>
+            <button onclick="showPage('login')">Iniciar Sesión</button>
+            <button onclick="showPage('registro')">Registrarse</button>
+            <div class="user-info" id="userInfo" style="display: none;"></div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Páginas -->
+        <div id="inicio" class="page active">
+            <div class="welcome-section">
+                <h1>¡Bienvenido a OlimpicTrained!</h1>
+                <p>Un nuevo paso para el aprendizaje</p>
+                <button class="cta-button" onclick="showPage('juegos')">Explorar Juegos Educativos</button>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🔐 Seguro</h3>
+                    <p>Enfatizamos la seguridad y protección de sus datos</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Eficaz</h3>
+                    <p>Métodos de aprendizajes efectivos y dinámicos</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Rápido</h3>
+                    <p>Experiencia de usuario fluida y optimizada</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="juegos" class="page">
+            <div class="welcome-section">
+                <h1>Selecciona tu Área de Aprendizaje</h1>
+                <p>Elige el tipo de juego educativo que deseas explorar</p>
+            </div>
+            <div class="games-grid">
+                <div class="game-card" onclick="window.location.href='JDeMates2 (1).html'">
+                    <div class="game-icon">🔢</div>
+                    <h3>Matemáticas</h3>
+                    <p>Desafía tu mente con problemas matemáticos interactivos.</p>
+                </div>
+                <div class="game-card" onclick="window.location.href='JDe Lec (1).html'">
+                    <div class="game-icon">📚</div>
+                    <h3>Lectura</h3>
+                    <p>Mejora tu comprensión lectora con historias fascinantes.</p>
+                </div>
+                <div class="game-card" onclick="window.location.href='sociales.html'">
+                    <div class="game-icon">🌍</div>
+                    <h3>Sociales</h3>
+                    <p>Explora historia, geografía y cultura mundial.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="login" class="page">
+            <div class="card">
+                <h1>Iniciar Sesión</h1>
+                <div class="success-message" id="loginSuccess">¡Sesión iniciada exitosamente!</div>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Correo Electrónico</label>
+                        <input type="email" id="loginEmail" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Contraseña</label>
+                        <input type="password" id="loginPassword" required placeholder="********">
+                    </div>
+                    <button type="submit" class="btn">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="registro" class="page">
+            <div class="card">
+                <h1>Registrarse</h1>
+                <div class="success-message" id="registerSuccess">¡Registro completado exitosamente!</div>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="registerName">Nombre Completo</label>
+                        <input type="text" id="registerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Confirmar Contraseña</label>
+                        <input type="password" id="registerConfirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn">Registrarse</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="acerca" class="page">
+            <div class="card">
+                <h1>Acerca de</h1>
+                <div class="content-display" id="acercaContent"></div>
+            </div>
+        </div>
+
+        <div id="ayuda" class="page">
+            <div class="card">
+                <h1>Ayuda</h1>
+                <div class="content-display" id="ayudaContent"></div>
+                <div class="edit-section">
+                    <h2>Editar Contenido</h2>
+                    <form id="ayudaForm">
+                        <div class="form-group">
+                            <label for="ayudaText">Contenido</label>
+                            <textarea id="ayudaText"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
